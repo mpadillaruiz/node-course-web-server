@@ -12,7 +12,6 @@ app.set('view engine','hbs');
 //Middleware allows to configurate how the app works. like a 3rd party add-on
 //built-in middleware
 
-
 //app.use is how you register middleware and it takes a function
 app.use((req,res,next)=>{
   var now=new Date().toString();
@@ -26,9 +25,9 @@ app.use((req,res,next)=>{
   next();
 });
 
-app.use((req,res,next)=>{
-  res.render('maintenance.hbs');
-});
+// app.use((req,res,next)=>{
+//   res.render('maintenance.hbs');
+// });
 
 //IT takes the path of the folder you want to serve
 app.use(express.static(__dirname+'/public'));
